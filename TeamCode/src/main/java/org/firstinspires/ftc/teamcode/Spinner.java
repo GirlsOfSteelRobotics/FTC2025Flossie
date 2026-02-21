@@ -1,13 +1,16 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public class Spinner {
     DcMotor motor;
 
     public Spinner(HardwareMap hardwareMap) {
+
         motor = hardwareMap.dcMotor.get("spinner");
+        motor.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 
     public void forward() {
